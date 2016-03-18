@@ -8,27 +8,7 @@
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           {{#if currentUser}}
-            <li class="dropdown user user-menu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <img src="images/ruffyG.jpg" class="user-image" alt="User Image">
-                <span class="hidden-xs">Ruffy Galang</span>
-              </a>
-              <ul class="dropdown-menu">
-                <li class="user-header">
-                  <img src="images/ruffyG.jpg" class="img-circle" alt="User Image">
-                  <p>
-                    Ruffy Galang - Account Manager
-                  </p>
-                </li>
-                <li class="user-body">
-                </li>
-                <li class="user-footer">
-                  <div class="pull-right">
-                    <a href="#" data-action="logout" class="btn btn-default btn-flat">Sign out</a>
-                  </div>
-                </li>
-              </ul>
-            </li>
+            {{>usermenu}}
           {{else}}
             <a href="{{ pathFor 'atSignIn' }}" class="btn btn-default navbar-btn">Sign in</a>
             <a href="{{ pathFor 'atSignUp' }}" class="btn btn-primary navbar-btn">Register</a> {{/if}}
