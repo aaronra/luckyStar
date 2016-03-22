@@ -1,0 +1,44 @@
+<template name="Projects">
+  <div class="box box-info">
+    <div class="box-header with-border">
+      <h3 class="box-title">Project List</h3>
+
+      <div class="box-tools pull-right">
+        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+        </button>
+        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+      </div>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+      <div class="table-responsive">
+        <table class="table no-margin">
+          <thead>
+          <tr>
+            <th>Receipt No.</th>
+            <th>Project Name</th>
+            <th>Supplier</th>
+            <th>Type Of Receipt</th>
+          </tr>
+          </thead>
+          <tbody>
+          {{#each projectList}}
+            <tr>
+              <td>{{this.receiptNo}}</td>
+              <td>{{this.name}}</td>
+              <td>{{this.supplier}}</td>
+              <td>{{this.receipt}}</td>
+            </tr>
+          {{/each}}
+          </tbody>
+        </table>
+      </div>
+      <!-- /.table-responsive -->
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer clearfix">
+      <a href="{{pathFor 'dashboard.projects.add'}}" class="btn btn-sm btn-info btn-flat pull-left">New Project</a>
+    </div>
+    <!-- /.box-footer -->
+  </div>
+</template>
